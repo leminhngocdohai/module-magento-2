@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <!-- <add 
+          id="Modulevip_Pro::helloworld" 
+          title="Hello World" 
+          module="Modulevip_Pro" 
+          sortOrder="51" 
+          resource="Modulevip_Pro::helloworld"
+        /> -->
+        <!-- <add 
+          id="Modulevip_Pro::post" 
+          title="Manage Posts" 
+          module="Modulevip_Pro" 
+          sortOrder="10" 
+          action="mageplaza_helloworld/post" 
+          resource="Modulevip_Pro::post" 
+          parent="Modulevip_Pro::helloworld"
+        /> -->
+        <add 
+          id="Modulevip_Pro::greetings" 
+          title="Greetings" 
+          translate="title" 
+          module="Modulevip_Pro" 
+
+          sortOrder="50" 
+          dependsOnModule="Modulevip_Pro" 
+          resource="Modulevip_Pro::greetings"
+        />
+        <add 
+          id="Modulevip_Pro::greetings_helloworld" 
+          title="Hello World" 
+          translate="title" 
+          module="Modulevip_Pro" 
+          parent="Modulevip_Pro::greetings" 
+          sortOrder="10" 
+          dependsOnModule="Modulevip_Pro" 
+          action="pro/helloworld" 
+          resource="Modulevip_Pro::greetings_helloworld"
+        />
+
+    </menu>
+</config>

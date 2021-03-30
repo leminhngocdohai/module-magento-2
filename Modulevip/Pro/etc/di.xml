@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!-- Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    
+    <!-- Fix for ui_component aht_portfolio_listing.xml -->
+    <!-- Configure our grid collection -->
+    <virtualType name="Modulevip\Pro\Model\ResourceModel\Tet\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">modulevip_pro_tet</argument>
+            <argument name="resourceModel" xsi:type="string">Modulevip\Pro\Model\ResourceModel\Tet</argument>
+            <argument name="eventPrefix" xsi:type="string">modulevip_pro_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">field_grid_collection</argument>
+        </arguments>
+    </virtualType>
+
+    <!-- register our data source: Dang ky nguon du lieu -->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="modulevip_pro_index_data_source" xsi:type="string">Modulevip\Pro\Model\ResourceModel\Tet\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!-- End Configure -->
+   
+
+</config>
